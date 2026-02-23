@@ -1,4 +1,37 @@
-:root {
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.hero {
+  text-align: center;
+  padding: 40px;
+  background: #dc2626;
+  color: white;
+}
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.cart {
+  padding: 40px;
+}
+
+
+
+
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -39,4 +72,4 @@ a {
   html {
     color-scheme: dark;
   }
-}
+} */

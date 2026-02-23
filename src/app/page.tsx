@@ -1,8 +1,22 @@
+import { products } from "@/data/products";
+import ProductCard from "@/components/ProductCard";
+import Cart from "@/components/Cart";
+
 export default function Home() {
   return (
-    <main style={{ padding: "40px", fontFamily: "sans-serif" }}>
-      <h1>🎄 Магазин ёлочных игрушек</h1>
-      <p>Сайт работает</p>
+    <main>
+      <section className="hero">
+        <h1>🎄 Магазин ёлочных игрушек</h1>
+        <p>Создайте атмосферу праздника</p>
+      </section>
+
+      <div className="catalog">
+        {products.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
+
+      <Cart />
     </main>
   );
 }
