@@ -41,4 +41,4 @@ yarn-error.log*
 next-env.d.ts
 
 #pictures
-public/images/decorations
+#public/images/decorations
