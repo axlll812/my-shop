@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useCart } from "@/context/CartContext";
 
 export default function Cart() {
@@ -11,7 +12,9 @@ export default function Cart() {
 
             {cart.map((item, index) => (
                 <div key={index}>
-                    {item.name} — {item.price} €
+                    <Link href={`/product/${item.id}`}>
+                        {item.name}
+                    </Link> — {item.price} €
                     <button onClick={() => removeFromCart(index)}>
                         ❌
                     </button>

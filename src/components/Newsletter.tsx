@@ -10,7 +10,7 @@ export default function Newsletter() {
                     <div className="flex bg-white rounded-xl overflow-hidden shadow-lg">
                         <input
                             type="email"
-                            placeholder="Введите ваш e-mail"
+                            placeholder="Введите ваш email"
                             className="px-6 py-3 text-black w-72 outline-none"
                         />
                         <button className="bg-green-700 px-6 hover:bg-green-800 transition">

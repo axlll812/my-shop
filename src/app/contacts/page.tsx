@@ -35,7 +35,7 @@ export default function ContactsPage() {
                                     <div className="text-2xl mt-1">✉️</div>
                                     <div>
                                         <h3 className="font-bold">Email:</h3>
-                                        <p className="text-red-700 font-medium">hello@newyearshop.ru</p>
+                                        <p className="text-red-700 font-medium">hello@newyearshop.bg</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4">
