@@ -1,7 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
+import { useCart } from "@/context/CartContext";
 
 export default function Header() {
+    const { cart } = useCart();
+
     return (
         <header className="bg-[#f5efe6] border-b border-[#e5d8c3]">
             <div className="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
@@ -19,12 +21,14 @@ export default function Header() {
                     <Link href="/contacts">Контакты</Link>
                 </nav>
 
-                <div className="relative">
+                <Link href="/cart" className="relative cursor-pointer hover:scale-110 transition-transform">
                     🛒
-                    <span className="absolute -top-2 -right-3 bg-red-600 text-white text-xs px-2 py-0.5 rounded-full">
-                        2
-                    </span>
-                </div>
+                    {cart.length > 0 && (
+                        <span className="absolute -top-2 -right-3 bg-red-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full min-w-[20px] text-center">
+                            {cart.length}
+                        </span>
+                    )}
+                </Link>
             </div>
         </header>
     );

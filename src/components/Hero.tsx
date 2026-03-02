@@ -1,7 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useCart } from "@/context/CartContext";
 
 export default function Hero() {
+    const { cart } = useCart();
+
     return (
         <section className="relative overflow-hidden">
             {/* Фон */}
@@ -25,6 +28,11 @@ export default function Hero() {
             <div className="relative section-container py-28 text-white">
                 <Link href="/catalog" className="absolute top-8 left-8 z-20 text-white/80 hover:text-white transition-all text-sm font-medium flex items-center gap-2">
                     <span className="text-xl">🛍️</span> Каталог товаров
+                </Link>
+
+                <Link href="/cart" className="absolute top-8 right-8 z-20 text-white/80 hover:text-white transition-all text-sm font-medium flex items-center gap-2 group">
+                    <span className="text-xl group-hover:scale-110 transition-transform">🛒</span>
+                    Корзина {(cart.length > 0) && `(${cart.length})`}
                 </Link>
 
                 <h1 className="text-6xl font-bold leading-tight mb-6 drop-shadow-lg">
