@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
     return (
@@ -22,6 +23,10 @@ export default function Hero() {
             />
 
             <div className="relative section-container py-28 text-white">
+                <Link href="/catalog" className="absolute top-8 left-8 z-20 text-white/80 hover:text-white transition-all text-sm font-medium flex items-center gap-2">
+                    <span className="text-xl">🛍️</span> Каталог товаров
+                </Link>
+
                 <h1 className="text-6xl font-bold leading-tight mb-6 drop-shadow-lg">
                     Создайте волшебство <br /> на Новый Год!
                 </h1>
@@ -30,9 +35,11 @@ export default function Hero() {
                     Авторские ёлочные игрушки для вашего праздника
                 </p>
 
-                <button className="bg-green-700 hover:bg-green-800 px-8 py-4 rounded-xl shadow-xl text-lg transition transform hover:scale-105">
-                    Перейти в каталог
-                </button>
+                <Link href="/catalog">
+                    <button className="bg-green-700 hover:bg-green-800 px-8 py-4 rounded-xl shadow-xl text-lg transition transform hover:scale-105">
+                        Перейти в каталог
+                    </button>
+                </Link>
             </div>
         </section>
     );

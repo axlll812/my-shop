@@ -5,12 +5,12 @@ export default function Header() {
     return (
         <header className="bg-[#f5efe6] border-b border-[#e5d8c3]">
             <div className="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
-                <div className="flex items-center gap-3">
+                <Link href="/" className="flex items-center gap-3">
                     <span className="text-2xl">🎄</span>
                     <span className="font-bold text-lg">
                         Магазин <span className="text-red-700">Ёлочных Игрушек</span>
                     </span>
-                </div>
+                </Link>
 
                 <nav className="hidden md:flex gap-8 font-medium">
                     <Link href="/catalog">Каталог</Link>
