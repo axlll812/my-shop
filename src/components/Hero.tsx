@@ -14,15 +14,6 @@ export default function Hero() {
             {/* затемнение */}
             <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/30" />
 
-            {/* декоративная ветка */}
-            <Image
-                src="/images/decorations/pine-branch.png"
-                alt=""
-                width={400}
-                height={400}
-                className="absolute bottom-0 right-0 opacity-90"
-            />
-
             <div className="relative section-container py-28 text-white">
                 <h1 className="text-6xl font-bold leading-tight mb-6 drop-shadow-lg">
                     Создайте волшебство <br /> на Новый Год!
