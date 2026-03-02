@@ -41,4 +41,8 @@ yarn-error.log*
 next-env.d.ts
 
 #pictures
+<<<<<<< HEAD
 #public/images/decorations
+=======
+#public/images/decorations
+>>>>>>> ec65d5eae4a9c4e4704f85234515e89a250884aa
