@@ -33,14 +33,12 @@ export default function ProductCard({ product }: any) {
                     {product.price} €
                 </p>
 
-                <Link href="/cart">
-                    <button
-                        onClick={() => addToCart(product)}
-                        className="w-full bg-red-700 hover:bg-red-800 text-white py-3 rounded-lg shadow-md transition transform active:scale-95"
-                    >
-                        В корзину
-                    </button>
-                </Link>
+                <button
+                    onClick={() => addToCart(product)}
+                    className="w-full bg-red-700 hover:bg-red-800 text-white py-3 rounded-lg shadow-md transition transform active:scale-95"
+                >
+                    В корзину
+                </button>
             </div>
         </div>
     );
