@@ -1,15 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { useCart } from "@/context/CartContext";
 import Link from "next/link";
+import { Product } from "@/data/products";
+import AddToCartButton from "./AddToCartButton";
 
-export default function ProductCard({ product }: any) {
-    const { addToCart } = useCart();
-
+export default function ProductCard({ product }: { product: Product }) {
     return (
         <div className="soft-card overflow-hidden group">
-            <div className="relative">
+            <Link href={`/product/${product.id}`} className="block relative">
                 <Image
                     src={product.image}
                     alt={product.name}
@@ -19,26 +18,29 @@ export default function ProductCard({ product }: any) {
                 />
 
                 {/* иконка избранного */}
-                <div className="absolute top-3 right-3 bg-white/80 backdrop-blur rounded-full p-2 shadow cursor-pointer hover:bg-red-50 transition">
+                <div
+                    onClick={(e) => {
+                        e.preventDefault();
+                        // TODO: handle favorite logic
+                    }}
+                    className="absolute top-3 right-3 bg-white/80 backdrop-blur rounded-full p-2 shadow cursor-pointer hover:bg-red-50 transition z-10"
+                >
                     ❤️
                 </div>
-            </div>
+            </Link>
 
             <div className="p-6">
-                <h3 className="font-semibold text-lg mb-2">
-                    {product.name}
-                </h3>
+                <Link href={`/product/${product.id}`}>
+                    <h3 className="font-semibold text-lg mb-2 hover:text-red-700 transition">
+                        {product.name}
+                    </h3>
+                </Link>
 
                 <p className="text-red-700 font-bold text-xl mb-4">
                     {product.price} €
                 </p>
 
-                <button
-                    onClick={() => addToCart(product)}
-                    className="w-full bg-red-700 hover:bg-red-800 text-white py-3 rounded-lg shadow-md transition transform active:scale-95"
-                >
-                    В корзину
-                </button>
+                <AddToCartButton product={product} />
             </div>
         </div>
     );
