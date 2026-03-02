@@ -7,7 +7,7 @@ export default function Header() {
     const { cart } = useCart();
 
     return (
-        <header className="bg-[#f5efe6] border-b border-[#e5d8c3]">
+        <header className="bg-[#f5efe6]/90 backdrop-blur-md border-b border-[#e5d8c3] sticky top-0 z-50 shadow-sm transition-all">
             <div className="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
                 <Link href="/" className="flex items-center gap-3">
                     <span className="text-2xl">🎄</span>
