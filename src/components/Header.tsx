@@ -13,10 +13,10 @@ export default function Header() {
                 </div>
 
                 <nav className="hidden md:flex gap-8 font-medium">
-                    <Link href="#">Каталог</Link>
-                    <Link href="#">О нас</Link>
-                    <Link href="#">Доставка</Link>
-                    <Link href="#">Контакты</Link>
+                    <Link href="/catalog">Каталог</Link>
+                    <Link href="/about">О нас</Link>
+                    <Link href="/delivery">Доставка</Link>
+                    <Link href="/contacts">Контакты</Link>
                 </nav>
 
                 <div className="relative">
